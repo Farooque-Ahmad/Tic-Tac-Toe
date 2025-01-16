@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #548687;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2vmin;
+    height: 70vmin;
+    width: 70vmin;
+    margin: 0 auto;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    background-color: #ffffc7;
+    font-size: 6vmin;
+    color: rgb(161, 87, 87);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: #f0e38c;
+}
+
+.reset-btn, .new-game {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 3vmin;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 60vmin;
+    margin-top: 1rem;
+}
+
+.reset-btn:hover, .new-game:hover {
+    background-color: #333;
+}
+
+.msg {
+    color: #ffffc7;
+    font-size: 4vmin;
+}
+
+.msg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .game {
+        height: 70vmin;
+        width: 70vmin;
+    }
+
+    .box {
+        font-size: 6vmin;
+    }
+
+    .reset-btn, .new-game {
+        font-size: 3vmin;
+    }
+
+    .msg {
+        font-size: 4vmin;
+    }
+}
+
+@media (max-width: 768px) {
+    .game {
+        height: 70vmin;
+        width: 70vmin;
+    }
+
+    .box {
+        font-size: 8vmin;
+    }
+
+    .reset-btn, .new-game {
+        font-size: 4vmin;
+    }
+
+    .msg {
+        font-size: 5vmin;
+    }
+}
+
+@media (max-width: 480px) {
+    .game {
+        height: 70vmin;
+        width: 70vmin;
+    }
+
+    .box {
+        font-size: 10vmin;
+    }
+
+    .reset-btn, .new-game {
+        font-size: 5vmin;
+        padding: 0.8rem;
+    }
+
+    .msg {
+        font-size: 6vmin;
+    }
+
+    .msg-container {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .game {
+        height: 80vmin;
+        width: 80vmin;
+    }
+
+    .box {
+        font-size: 12vmin;
+    }
+
+    .reset-btn, .new-game {
+        font-size: 6vmin;
+        padding: 0.6rem;
+    }
+
+    .msg {
+        font-size: 7vmin;
+    }
+
+    .reset-btn, .new-game {
+        width: 80%;
+    }
+}
